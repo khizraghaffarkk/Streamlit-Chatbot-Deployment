@@ -1,0 +1,10 @@
+langgraph 
+langsmith
+huggingface_hub
+langchain_huggingface
+torch
+protobuf
+sentencepiece
+streamlit
+requests
+python-dotenv

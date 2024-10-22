@@ -1,0 +1,30 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: streamlit-chatbot
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: streamlit-chatbot
+  template:
+    metadata:
+      labels:
+        app: streamlit-chatbot
+    spec:
+      containers:
+      - name: streamlit-chatbot
+        image: khizraghaffar/streamlit-chatbot:latest
+        ports:
+        - containerPort: 8501
+        env:
+        - name: HUGGINGFACEHUB_API_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: huggingface-secret
+              key: HUGGINGFACEHUB_API_TOKEN
+        - name: SERPAPI_KEY
+          valueFrom:
+            secretKeyRef:
+              name: serpapi-secret
+              key: SERPAPI_KEY
