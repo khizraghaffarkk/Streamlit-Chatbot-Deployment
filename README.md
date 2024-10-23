@@ -2,7 +2,7 @@
 
 This project is a conversational chatbot built using Streamlit and the Hugging Face Mistral-7B-Instruct-v0.3 language model. The chatbot has enhanced capabilities, including integrating external tools for web searching via SerpAPI. Users can control whether the chatbot uses these tools, and the usage of tools is dynamically displayed in the interface. The application is containerized using Docker and can be deployed with Kubernetes.
 
-## Features
+### Features
 
 - **LLM-based chatbot**: Powered by Hugging Face's `Mistral-7B-Instruct-v0.3` model.
 - **Tool integration**: The chatbot can use external tools (e.g., web search through SerpAPI) to assist with answering questions.
@@ -11,11 +11,11 @@ This project is a conversational chatbot built using Streamlit and the Hugging F
 - **Docker support**: Easily deploy the chatbot in a containerized environment using Docker.
 - **Kubernetes support**: Scale and manage the application using Kubernetes.
 
-## Demo
+### Demo
 
 ![App Screenshot](screenshot.png)
 
-## Requirements
+### Requirements
 
 - Docker
 - Kubernetes
@@ -23,27 +23,26 @@ This project is a conversational chatbot built using Streamlit and the Hugging F
 - Hugging Face API token (required for accessing gated models)
 - SerpAPI key (required for web search functionality)
 
-## Installation
+### Installation
 
-### 1. Clone the repository
-
+#### 1. Clone the repository
 	```bash
 	git clone https://github.com/yourusername/streamlit-chatbot.git
 	cd streamlit-chatbot
 	```
-### 2. Set up your environment
+#### 2. Set up your environment
        You can use a virtual environment or conda to isolate the project dependencies.
 	```bash
 	python3 -m venv chatenv
 	source chatenv/bin/activate
 	```
 
-### 3. Install dependencies
+#### 3. Install dependencies
 	```bash
 	pip install -r requirements.txt
 	```
 
-### 4. Get your Hugging Face API token
+#### 4. Get your Hugging Face API token
        This project uses Hugging Face’s Mistral-7B-Instruct-v0.3 model, which is gated. You need to get an API token:
 
 	- Visit Hugging Face.
@@ -51,7 +50,7 @@ This project is a conversational chatbot built using Streamlit and the Hugging F
 	- Navigate to your profile settings and generate an API token.
 	- Copy your token.
 
-### 5. Get your SerpAPI key
+#### 5. Get your SerpAPI key
        SerpAPI is used to perform web searches in the chatbot. You need to generate an API key from SerpAPI:
 
 	- Visit SerpAPI.
@@ -59,7 +58,7 @@ This project is a conversational chatbot built using Streamlit and the Hugging F
 	- Navigate to your account dashboard and generate an API key.
 	- Copy your SerpAPI key.
 
-### 6. Add your API keys
+#### 6. Add your API keys
        You need to set the environment variables `HUGGINGFACEHUB_API_TOKEN` and `SERPAPI_KEY` to authenticate with Hugging Face and SerpAPI.
        # Using the `.env` file (optional)
        Create a `.env` file in the project directory:
@@ -73,7 +72,7 @@ This project is a conversational chatbot built using Streamlit and the Hugging F
          export SERPAPI_KEY="your_serpapi_key_here"
          ```
          
-## Running the Project
+### Running the Project
 ### 1. Run locally with Streamlit
        Once everything is set up, you can run the app locally using Streamlit:
         ```bash
@@ -92,7 +91,7 @@ This project is a conversational chatbot built using Streamlit and the Hugging F
         ```
        Access the app on `http://localhost:8501` from your browser.
        
-## Kubernetes Deployment
+### Kubernetes Deployment
    To scale the app and run it across multiple containers, you can deploy it using Kubernetes.
 
 ### Prerequisites
