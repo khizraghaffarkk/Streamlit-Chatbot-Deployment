@@ -26,10 +26,10 @@ This project is a conversational chatbot built using Streamlit and the Hugging F
 ### Installation
 
 #### 1. Clone the repository
-	```bash
-	git clone https://github.com/yourusername/streamlit-chatbot.git
-	cd streamlit-chatbot
-	```
+```bash
+git clone https://github.com/yourusername/streamlit-chatbot.git
+cd streamlit-chatbot
+```
 #### 2. Set up your environment
        You can use a virtual environment or conda to isolate the project dependencies.
 	```bash
