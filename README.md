@@ -11,10 +11,6 @@ This project is a conversational chatbot built using Streamlit and the Hugging F
 - **Docker support**: Easily deploy the chatbot in a containerized environment using Docker.
 - **Kubernetes support**: Scale and manage the application using Kubernetes.
 
-### Demo
-
-![App Screenshot](screenshot.png)
-
 ### Requirements
 
 - Docker
@@ -59,7 +55,7 @@ SerpAPI is used to perform web searches in the chatbot. You need to generate an 
 
 #### 6. Add your API keys
 You need to set the environment variables `HUGGINGFACEHUB_API_TOKEN` and `SERPAPI_KEY` to authenticate with Hugging Face and SerpAPI.
-# Using the `.env` file (optional)
+#### Using the `.env` file (optional)
 Create a `.env` file in the project directory:
 ```bash
 echo "HUGGINGFACEHUB_API_TOKEN=your_huggingface_token_here" > .env
@@ -90,7 +86,7 @@ docker run -p 8501:8501 streamlit-chatbot
 ```
 Access the app on `http://localhost:8501` from your browser.
        
-#### Kubernetes Deployment
+### Kubernetes Deployment
 To scale the app and run it across multiple containers, you can deploy it using Kubernetes.
 
 #### Prerequisites
