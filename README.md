@@ -1,4 +1,4 @@
-# Streamlit Chatbot with Hugging Face LLM and Tool Support
+## Streamlit Chatbot with Hugging Face LLM and Tool Support
 
 This project is a conversational chatbot built using Streamlit and the Hugging Face Mistral-7B-Instruct-v0.3 language model. The chatbot has enhanced capabilities, including integrating external tools for web searching via SerpAPI. Users can control whether the chatbot uses these tools, and the usage of tools is dynamically displayed in the interface. The application is containerized using Docker and can be deployed with Kubernetes.
 
@@ -73,14 +73,14 @@ This project is a conversational chatbot built using Streamlit and the Hugging F
          ```
          
 ### Running the Project
-### 1. Run locally with Streamlit
+#### 1. Run locally with Streamlit
        Once everything is set up, you can run the app locally using Streamlit:
         ```bash
         streamlit run app.py
         ```
        Open your browser and go to `http://localhost:8501` to interact with the chatbot.
        
-### 2. Run with Docker
+#### 2. Run with Docker
        Build the Docker image
         ```bash
         docker build -t streamlit-chatbot .
@@ -91,34 +91,34 @@ This project is a conversational chatbot built using Streamlit and the Hugging F
         ```
        Access the app on `http://localhost:8501` from your browser.
        
-### Kubernetes Deployment
+#### Kubernetes Deployment
    To scale the app and run it across multiple containers, you can deploy it using Kubernetes.
 
-### Prerequisites
+#### Prerequisites
 - Kubernetes cluster set up (e.g., Minikube or cloud provider)
 - `kubectl` installed and configured
 
 ### Steps
-### 1. Build and push your Docker image to a container registry (like Docker Hub).
+#### 1. Build and push your Docker image to a container registry (like Docker Hub).
         ```bash
 	docker tag streamlit-chatbot your-dockerhub-username/streamlit-chatbot
 	docker push your-dockerhub-username/streamlit-chatbot
         ```
-### 2. Create Kubernetes `deployment` & `service` files (deployment.yaml).
-### 3. Create Kubernetes secrets for your Hugging Face and SerpAPI tokens:
+#### 2. Create Kubernetes `deployment` & `service` files (deployment.yaml).
+#### 3. Create Kubernetes secrets for your Hugging Face and SerpAPI tokens:
         ```bash
 	kubectl create secret generic huggingface-secret --from-literal=HUGGINGFACEHUB_API_TOKEN=your_huggingface_token_here
 	kubectl create secret generic serpapi-secret --from-literal=SERPAPI_KEY=your_serpapi_key_here
-### 4. Deploy the application
+#### 4. Deploy the application
         ```bash
 	kubectl apply -f deployment.yaml
         ```             
-### 5. Expose the deployment as a service:
+#### 5. Expose the deployment as a service:
         ```bash
 	kubectl expose deployment streamlit-chatbot --type=LoadBalancer --port=80 --target-port=8501
         ``` 
         Now you can access your app through the Kubernetes service URL.
-### 6. Deploy the secret:
+#### 6. Deploy the secret:
         ```bash
 	kubectl apply -f secret.yml
         ``` 
