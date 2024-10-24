@@ -109,18 +109,19 @@ kubectl create secret generic serpapi-secret --from-literal=SERPAPI_KEY=your_ser
 #### 4. Deploy the application
 ```bash
 kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
 ```             
-#### 5. Expose the deployment as a service:
+
+#### 5. Deploy the secret:
+```bash
+kubectl apply -f secret.yml
+```
+
+#### 6. Expose the deployment as a service:
 ```bash
 kubectl expose deployment streamlit-chatbot --type=LoadBalancer --port=80 --target-port=8501
 ``` 
 Now you can access your app through the Kubernetes service URL.
-#### 6. Deploy the secret:
-```bash
-kubectl apply -f secret.yml
-``` 
-Now you can access your app through the `Kubernetes service URL`.
-
 
 
 
