@@ -104,6 +104,7 @@ docker push your-dockerhub-username/streamlit-chatbot
 ```bash
 kubectl create secret generic huggingface-secret --from-literal=HUGGINGFACEHUB_API_TOKEN=your_huggingface_token_here
 kubectl create secret generic serpapi-secret --from-literal=SERPAPI_KEY=your_serpapi_key_here
+```
 
 #### 4. Deploy the application
 ```bash
