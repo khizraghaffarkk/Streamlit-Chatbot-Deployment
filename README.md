@@ -121,7 +121,7 @@ kubectl apply -f secret.yml
 ```bash
 kubectl expose deployment streamlit-chatbot --type=LoadBalancer --port=80 --target-port=8501
 ``` 
-Now you can access your app through the Kubernetes service URL.
+Now you can access your app through the `Kubernetes service URL`.
 
 
 
